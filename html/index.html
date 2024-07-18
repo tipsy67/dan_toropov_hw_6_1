@@ -267,8 +267,8 @@
         </header>
 
         <main class="row">
-            <div class="row">
-                <div class="col-4 text-center">
+            <div class="row d-flex" style="display: table">
+                <div class="col-4 text-center" style="display: table-cell; float: none;">
                     <div class="card mb-4 rounded-3 shadow-sm">
                         <div class="card-header py-3">
                             <h4 class="my-0 fw-normal">Товар 1</h4>
@@ -281,31 +281,33 @@
                                 Email support,
                                 Help center access
                             </p>
+                        </div>
+                        <div class="card-footer">
                             <button type="button" class="w-100 btn btn-lg btn-success">Купить</button>
                         </div>
                     </div>
                 </div>
-                <div class="col">
-                    <div class="card mb-4 rounded-3 shadow-sm">
+                <div class="col-8">
+                    <div class="card mb-4 rounded-3 shadow-sm" style="display: table-cell; float: none;">
                         <div class="card-header py-3 text-center">
                             <h4 class="my-0 fw-normal">Данные пользователя</h4>
                         </div>
                         <div class="card-body">
-                            <form>
-                              <div class="form-group row mb-3">
+                              <div class="row mb-3">
                                 <label for="InputName1" class="col-sm-2 col-form-label">Имя</label>
                                   <div class="col-sm-10">
                                     <input type="text" class="form-control" id="InputName1" placeholder="Введите имя">
                                   </div>
                               </div>
-                              <div class="form-group row mb-3">
+                              <div class="row mb-3">
                                 <label for="InputEmail1" class="col-sm-2 col-form-label">Email</label>
                                   <div class="col-sm-10">
                                       <input type="email" class="form-control" id="InputEmail1" placeholder="Введите email">
                                   </div>
                               </div>
+                        </div>
+                        <div class="card-footer">
                               <button type="button" class="w-100 btn btn-lg btn-success">Отправить</button>
-                            </form>
                         </div>
                     </div>
                 </div>
