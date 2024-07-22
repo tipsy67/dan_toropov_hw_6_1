@@ -54,6 +54,17 @@
             box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
         }
 
+        .b-example-divider-h {
+            flex-shrink: 0;
+            width: 100vw;
+            height: 0.5rem;
+            background-color: rgba(0, 0, 0, .1);
+            border: solid rgba(0, 0, 0, .15);
+            border-width: 1px 0;
+            box-shadow: inset 0 .125em 0.125em rgba(0, 0, 0, .1), inset 0 .125em .125em rgba(0, 0, 0, .15);
+        }
+
+
         .bi {
             vertical-align: -.125em;
             pointer-events: none;
@@ -266,10 +277,10 @@
             </div>
         </header>
 
-        <main class="row">
-            <div class="row d-flex" style="display: table">
-                <div class="col-4 text-center" style="display: table-cell; float: none;">
-                    <div class="card mb-4 rounded-3 shadow-sm">
+        <main class="row overflow-auto">
+            <div class="row">
+                <div class="card-group">
+                    <div class="card rounded-3 shadow-sm m-1">
                         <div class="card-header py-3">
                             <h4 class="my-0 fw-normal">Товар 1</h4>
                         </div>
@@ -286,31 +297,118 @@
                             <button type="button" class="w-100 btn btn-lg btn-success">Купить</button>
                         </div>
                     </div>
-                </div>
-                <div class="col-8">
-                    <div class="card mb-4 rounded-3 shadow-sm" style="display: table-cell; float: none;">
+
+                    <div class="card rounded-3 shadow-sm m-1">
                         <div class="card-header py-3 text-center">
                             <h4 class="my-0 fw-normal">Данные пользователя</h4>
                         </div>
                         <div class="card-body">
-                              <div class="row mb-3">
+                            <div class="row">
                                 <label for="InputName1" class="col-sm-2 col-form-label">Имя</label>
-                                  <div class="col-sm-10">
+                                <div class="col-sm-10">
                                     <input type="text" class="form-control" id="InputName1" placeholder="Введите имя">
-                                  </div>
-                              </div>
-                              <div class="row mb-3">
+                                </div>
+                            </div>
+                            <div class="row">
                                 <label for="InputEmail1" class="col-sm-2 col-form-label">Email</label>
-                                  <div class="col-sm-10">
-                                      <input type="email" class="form-control" id="InputEmail1" placeholder="Введите email">
-                                  </div>
-                              </div>
+                                <div class="col-sm-10">
+                                    <input type="email" class="form-control" id="InputEmail1"
+                                           placeholder="Введите email">
+                                </div>
+                            </div>
                         </div>
                         <div class="card-footer">
-                              <button type="button" class="w-100 btn btn-lg btn-success">Отправить</button>
+                            <button type="button" class="w-100 btn btn-lg btn-success">Отправить</button>
                         </div>
                     </div>
                 </div>
+            </div>
+            <div class="row d-flex">
+                    <div>
+                        <div class="card-body py-3 text-center">
+                            <h1 class="card-title fw-normal">FAQ</h1>
+                            <button type="button" data-bs-toggle="collapse" data-bs-target="#collapseBuy"
+                                    aria-expanded="false" aria-controls="#collapseBuy"
+                                    class="btn btn-lg btn-info col-3 mx-auto">Как купить?
+                            </button>
+                            <button type="button" data-bs-toggle="collapse" data-bs-target="#collapseDelivery"
+                                    aria-expanded="false" aria-controls="#collapseDelivery"
+                                    class="btn btn-lg btn-info col-3 mx-auto">Как доставить?
+                            </button>
+                            <button type="button" data-bs-toggle="collapse" data-bs-target="#collapseWarranty"
+                                    aria-expanded="false" aria-controls="#collapseWarranty"
+                                    class="btn btn-lg btn-info col-3 mx-auto">Какая гарантия?
+                            </button>
+                            <div class="collapse" id="collapseBuy">
+                                <div class="card card-body m-1">
+                                    Просто!
+                                </div>
+                            </div>
+                            <div class="collapse" id="collapseDelivery">
+                                <div class="card card-body m-1">
+                                    Быстро!
+                                </div>
+                            </div>
+                            <div class="collapse" id="collapseWarranty">
+                                <div class="card card-body m-1">
+                                    Вечная!
+                                </div>
+                            </div>
+                        </div>
+                </div>
+            </div>
+			
+			<div class="b-example-divider-h my-2"></div>
+          
+			<div class="row d-flex">
+            <div class="card mx-2">
+                <table class="table align-middle">
+                    <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Наименование</th>
+                        <th scope="col">Цена</th>
+                        <th scope="col">Кол-во</th>
+                        <th scope="col">Сумма</th>
+                        <th scope="col">Статус</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <th scope="row">1</th>
+                        <td>Стул</td>
+                        <td>4.000</td>
+                        <td>5</td>
+                        <td>20.000</td>
+                        <td> <div class="alert alert-primary text-center" role="alert">Новый</div></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">2</th>
+                        <td>Стол новый</td>
+                        <td>10.000</td>
+                        <td>1</td>
+                        <td>10.000</td>
+                        <td> <div class="alert alert-warning text-center" role="alert">Обработка</div></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">3</th>
+                        <td>Шкаф</td>
+                        <td>7.000</td>
+                        <td>3</td>
+                        <td>21.000</td>
+                        <td> <div class="alert alert-success text-center" role="alert">Обработан</div></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">4</th>
+                        <td>Стол старый</td>
+                        <td>7.000</td>
+                        <td>1</td>
+                        <td>7.000</td>
+                        <td> <div class="alert alert-danger text-center" role="alert">Отмена</div></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
             </div>
         </main>
 
